@@ -8,16 +8,11 @@
       href="https://fonts.googleapis.com/css?family=Muli:400,500,700,800&display=swap"
       rel="stylesheet"
     />
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"
-    />
     <link rel="stylesheet" href="dist/css/style.min.css" />
     <title>Habitual | Make it happen</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container container__glow">
       <header class="header">
         <div class="header__text-container">
           <h1 class="heading-primary">
@@ -48,9 +43,9 @@
             <div class="weekdays__weekday">Mon</div>
             <div class="weekdays__weekday">Tue</div>
             <div class="weekdays__weekday">Wed</div>
-            <div class="weekdays__weekday">Thu &nbsp;</div>
-            <div class="weekdays__weekday">Fri &nbsp;</div>
-            <div class="weekdays__weekday">Sat&nbsp;</div>
+            <div class="weekdays__weekday ">Thu</div>
+            <div class="weekdays__weekday mg-right">Fri</div>
+            <div class="weekdays__weekday mg-right">Sat</div>
           </div>
         </section>
 
@@ -60,41 +55,43 @@
           </div>
           <div class="habits">
             <div class="habits__container">
-              <div class="habits__box habits__box__skip sun-habit"></div>
-              <div
-                class="habits__box habits__box__yes lnr lnr-smile mon-habit"
-              ></div>
-              <div
-                class="habits__box habits__box__no lnr lnr-neutral tue-habit"
-              ></div>
-              <div class="habits__box wed-habit"></div>
-              <div class="habits__box thu-habit"></div>
-              <div class="habits__box fri-habit"></div>
-              <div class="habits__box sat-habit"></div>
+              <div class="habits__box glow habits__box--skip sun-habit">
+                &#9673;
+              </div>
+              <div class="habits__box glow habits__box--yes mon-habit">
+                &#9673;
+              </div>
+              <div class="habits__box glow habits__box--no tue-habit">
+                &#9673;
+              </div>
+              <div class="habits__box glow wed-habit"></div>
+              <div class="habits__box glow thu-habit"></div>
+              <div class="habits__box glow fri-habit"></div>
+              <div class="habits__box glow sat-habit"></div>
             </div>
           </div>
         </section>
         <section class="habit-row">
           <div class="habit-title">
             <h2 class="habit-title__title">Reading</h2>
-            <span class="btn-delete lnr lnr-cross-circle"></span>
+            <p class="btn-delete">&times;</p>
           </div>
           <div class="habits">
             <div class="habits__container">
-              <div class="habits__box sun-habit"></div>
-              <div class="habits__box mon-habit"></div>
-              <div class="habits__box tue-habit"></div>
-              <div class="habits__box wed-habit"></div>
-              <div class="habits__box thu-habit"></div>
-              <div class="habits__box fri-habit"></div>
-              <div class="habits__box sat-habit"></div>
+              <div class="habits__box glow sun-habit"></div>
+              <div class="habits__box glow mon-habit"></div>
+              <div class="habits__box glow tue-habit"></div>
+              <div class="habits__box glow wed-habit"></div>
+              <div class="habits__box glow thu-habit"></div>
+              <div class="habits__box glow fri-habit"></div>
+              <div class="habits__box glow sat-habit"></div>
             </div>
           </div>
         </section>
       </main>
-
       <footer class="footer">&nbsp;</footer>
     </div>
+
     <script src="app.js"></script>
   </body>
 </html>
