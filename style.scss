@@ -5,7 +5,7 @@ $color-bg: #eef6fd;
 $color-black: #000;
 
 $red: #d7263d;
-$orange: #f56e48;
+$orange: #f46036;
 $navy: #2e294e;
 $green: #1b998b;
 $yellow: #c5d86d;
@@ -45,24 +45,10 @@ body {
   }
 }
 
-//********** SECTIONS **********//
-
+//********** HEADER **********//
 .header {
   padding: 3rem 0;
 }
-
-.input-habit {
-  margin: 0 auto;
-  width: 90%;
-  padding: 2rem 0;
-}
-
-.weekdays {
-  padding: 3rem 0;
-}
-
-//********** HEADER **********//
-
 .heading-primary {
   width: 90%;
   background-image: linear-gradient(to left bottom, $navy, $green, $yellow);
@@ -89,13 +75,19 @@ body {
 }
 
 //********** NEW HABIT INPUT **********//
+.input-habit {
+  margin: 0 auto;
+  width: 90%;
+  padding: 1.5rem 0;
+}
+
 .new-habit {
   &__input-wrapper {
     margin: 0 auto;
     width: 80%;
     height: 5rem;
     padding: 2px;
-    border-radius: 12px;
+    border-radius: 23px;
     background-image: linear-gradient(to left, $navy, $green, $yellow);
   }
   &__input-box {
@@ -107,13 +99,14 @@ body {
     padding: 1.5rem 2rem;
     background-color: $color-bg;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
     display: block;
     transition: all 0.2s;
     &:focus {
       outline: none;
       border: none;
-      transform: translateY(-2px);
+      box-shadow: inset 0 0 0 2px $color-bg, 0 0 0 2px $color-bg,
+        4px -3px 23px $yellow, -4px 3px 25px $green;
     }
     &::-webkit-input-placeholder {
       color: $color-light-grey;
@@ -135,6 +128,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem 0;
 
   &__text-container {
     display: flex;
@@ -158,23 +152,20 @@ body {
 .habit-row {
   padding: 1rem 3rem 2rem 3rem;
 }
-
 .btn-delete {
   font-size: 2rem;
   font-weight: 400;
   padding-left: 1rem;
-  transform: translateY(-5px);
   color: $red;
 }
 
 .habit-title {
   display: flex;
-  margin: 0 auto;
-  width: 61rem;
+  align-items: center;
   padding-bottom: 1rem;
   &__title {
-    font-size: 1.3rem;
-    font-weight: 500;
+    font-size: 1.2rem;
+    font-weight: 400;
   }
 }
 .glow {
@@ -219,22 +210,50 @@ body {
   }
 }
 
-// //********** DROPDOWN **********//
-// .highlight {
-//   transition: all 0.2s;
-//   border-bottom: 12px solid $color-light-grey;
-//   position: absolute;
-//   top: 0;
-//   background: white;
-//   left: 0;
-//   z-index: -1;
-//   border-radius: 20px;
-//   display: block;
-//   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-// }
-
-//********** DROPDOWN **********//
+//********** FOOTER **********//
 
 .footer {
-  padding: 3rem 0;
+  padding: 4rem 0 2rem 0;
+  &--text {
+    background-image: linear-gradient(to left bottom, $navy, $green, $yellow);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    margin: 0 auto;
+    text-transform: lowercase;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+
+//********** MOBILE SCREENS **********//
+@media only screen and (max-width: 425px) {
+  html {
+    font-size: 50%;
+  }
+  .new-habit {
+    &__input-box {
+      padding: 1.45rem 1.8rem;
+    }
+  }
+}
+@media only screen and (max-width: 350px) {
+  html {
+    font-size: 43.75%;
+  }
+  .container {
+    width: 45rem;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 10px;
+    &__glow {
+      box-shadow: none;
+    }
+  }
 }
