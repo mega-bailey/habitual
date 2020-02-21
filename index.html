@@ -9,16 +9,23 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="dist/css/style.min.css" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
     <title>Habitual | Make it happen</title>
   </head>
   <body>
     <div class="container container__glow">
       <header class="header">
         <div class="header__text-container">
-          <h1 class="heading-primary">
-            <span class="heading-primary--main">Habitual</span>
-            <span class="heading-primary--sub">Make change happen</span>
-          </h1>
+          <div class="heading-primary">
+            <h1 class="heading-primary--main">Habitual</h1>
+            <h2 class="heading-primary--sub">Make change happen</h2>
+          </div>
         </div>
       </header>
       <main>
@@ -28,7 +35,7 @@
               type="text"
               class="new-habit__input-box"
               placeholder="Enter a new habit"
-              id="habit"
+              id="input"
             />
 
             <label for="habit" class="new-habit__label"
@@ -37,7 +44,7 @@
           </div>
         </section>
 
-        <section class="weekdays">
+        <div class="weekdays" id="parentDiv">
           <div class="weekdays__text-container">
             <div class="weekdays__weekday">Sun</div>
             <div class="weekdays__weekday">Mon</div>
@@ -47,47 +54,25 @@
             <div class="weekdays__weekday mg-right">Fri</div>
             <div class="weekdays__weekday mg-right">Sat</div>
           </div>
-        </section>
+        </div>
 
-        <section class="habit-row">
+        <!-- <div class="habit-row">
           <div class="habit-title">
             <h2 class="habit-title__title">Exercise</h2>
+            <span class="btn-delete">&times;</span>
           </div>
           <div class="habits">
             <div class="habits__container">
-              <div class="habits__box glow habits__box--skip sun-habit">
-                &#9673;
-              </div>
-              <div class="habits__box glow habits__box--yes mon-habit">
-                &#9673;
-              </div>
-              <div class="habits__box glow habits__box--no tue-habit">
-                &#9673;
-              </div>
-              <div class="habits__box glow wed-habit"></div>
-              <div class="habits__box glow thu-habit"></div>
-              <div class="habits__box glow fri-habit"></div>
-              <div class="habits__box glow sat-habit"></div>
+              <div class="habits__box glow blank">&#9673;</div>
+              <div class="habits__box glow ">&#9673;</div>
+              <div class="habits__box glow ">&#9673;</div>
+              <div class="habits__box glow ">&#9673;</div>
+              <div class="habits__box glow ">&#9673;</div>
+              <div class="habits__box glow ">&#9673;</div>
+              <div class="habits__box glow ">&#9673;</div>
             </div>
           </div>
-        </section>
-        <section class="habit-row">
-          <div class="habit-title">
-            <h2 class="habit-title__title">Reading</h2>
-            <p class="btn-delete">&times;</p>
-          </div>
-          <div class="habits">
-            <div class="habits__container">
-              <div class="habits__box glow sun-habit"></div>
-              <div class="habits__box glow mon-habit"></div>
-              <div class="habits__box glow tue-habit"></div>
-              <div class="habits__box glow wed-habit"></div>
-              <div class="habits__box glow thu-habit"></div>
-              <div class="habits__box glow fri-habit"></div>
-              <div class="habits__box glow sat-habit"></div>
-            </div>
-          </div>
-        </section>
+        </div> -->
       </main>
       <footer class="footer">
         <p class="footer--text">"We are what we repeatedly do"</p>
