@@ -275,26 +275,25 @@ body {
   html {
     font-size: 50%;
   }
+  .container {
+    &__glow {
+      box-shadow: none;
+    }
+  }
   .new-habit {
+    &__input-wrapper {
+      margin: 0 auto;
+      width: 50%;
+      height: 5rem;
+      padding: 2px;
+    }
     &__input-box {
       padding: 1.45rem 1.8rem;
     }
   }
 }
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 375px) {
   html {
     font-size: 43.75%;
-  }
-  .container {
-    width: 45rem;
-    margin: 0 auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    border-radius: 10px;
-    &__glow {
-      box-shadow: none;
-    }
   }
 }
