@@ -1,5 +1,5 @@
 //GET NEW HABIT INPUT VALUE
-$('input:text').keypress(function(e) {
+$('input:text').keypress(function (e) {
   let newHabit = $(this).val();
   if (e.which == 13 && newHabit != '') {
     e.currentTarget.value = '';
@@ -12,11 +12,11 @@ $('input:text').keypress(function(e) {
     $newHabitRow.insertAfter('.weekdays');
 
     //DELETE THE HABIT WHEN X IS CLICKED
-    $('span').click(function(e) {
+    $('span').click(function (e) {
       $(this)
         .parent()
         .parent()
-        .fadeOut(400, function() {
+        .fadeOut(400, function () {
           $(this).remove();
         });
     });
@@ -24,22 +24,14 @@ $('input:text').keypress(function(e) {
 });
 
 //TOGGLE BETWEEN COLORS
-$('.container').click(function(e) {
+$('.container').click(function (e) {
   if ($(e.target).hasClass('blank')) {
-    $(e.target)
-      .removeClass('blank')
-      .addClass('yes');
+    $(e.target).removeClass('blank').addClass('yes');
   } else if ($(e.target).hasClass('yes')) {
-    $(e.target)
-      .removeClass('yes')
-      .addClass('no');
+    $(e.target).removeClass('yes').addClass('no');
   } else if ($(e.target).hasClass('no')) {
-    $(e.target)
-      .removeClass('no')
-      .addClass('skip');
+    $(e.target).removeClass('no').addClass('skip');
   } else if ($(e.target).hasClass('skip')) {
-    $(e.target)
-      .removeClass('skip')
-      .addClass('blank');
+    $(e.target).removeClass('skip').addClass('blank');
   }
 });
